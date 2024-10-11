@@ -1,0 +1,4 @@
+FROM registry.access.redhat.com/ubi9/ubi:latest
+
+RUN yum install -y python12 ansible-navigator>=3.4.2 ansible-runner ansible pyvmomi && \
+    ansible-galaxy collection install infra.controller_configuration
